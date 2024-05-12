@@ -277,7 +277,7 @@ print(random())
 print('\n')
 
 #------------ Variable Scope
-''' Variables created within fumctions have a local scope. While variable that are created outside of functions have a global scope.  Every line of code in a program is also either in the global scope or local scope, and each function also has its own local scope'''
+''' Variables created within functions have a local scope. While variable that are created outside of functions have a global scope.  Every line of code in a program is also either in the global scope or local scope, and each function also has its own local scope'''
 
 example = "Hello world"  # global
 
@@ -334,6 +334,7 @@ def print_glob():
     print(glob_var + loc_var)
 
 
+# noinspection PyRedeclaration
 glob_var = "This is a string..!"
 print_glob()
 
@@ -353,7 +354,7 @@ first()
 second()
 
 ''' In this example program, the local scope of the called first d=function was destroyed after it returned.
- Thus, when the scond function was called and tried to return LOC, it could not find a LOC variable to return and the name error message was displayed as a result.'''
+ Thus, when the second function was called and tried to return LOC, it could not find a LOC variable to return and the name error message was displayed as a result.'''
 
 # ---> You can use the same name for different variables as long as they are in different scopes
 
@@ -366,6 +367,7 @@ def loc_ex1():
 def loc_ex2():
     fruit = "banana"
     print(fruit)
+
 
 fruit = "apple"
 loc_ex1()
@@ -447,10 +449,10 @@ print('\n')
          ------------------------------'''
 # example for AND operator
 print("AND Operator..!")
-print(4 > 1 and "word" == "word")   #True and True
-print(8.76 == 8.7600 and 2 != 2)    #True and False
-print("earth" == "Earth" and 6 <= 3)#False and False
-print(10 == 5 and 10 != 5)          #False and True
+print(4 > 1 and "word" == "word")       # True and True
+print(8.76 == 8.7600 and 2 != 2)        # True and False
+print("earth" == "Earth" and 6 <= 3)    # False and False
+print(10 == 5 and 10 != 5)              # False and True
 
 print("\n")
 ''' --------------- OR Operator ---------
@@ -468,10 +470,10 @@ print("\n")
 
 # example for AND operator
 print("OR Operator..!")
-print(4 > 1 or "word" == "word")   #True and True
-print(8.76 == 8.7600 or 2 != 2)    #True and False
-print("earth" == "Earth" or 6 <= 3)#False and False
-print(10 == 5 or 10 != 5)          #False and True
+print(4 > 1 or "word" == "word")        # True and True
+print(8.76 == 8.7600 or 2 != 2)         # True and False
+print("earth" == "Earth" or 6 <= 3)     # False and False
+print(10 == 5 or 10 != 5)               # False and True
 print('\n')
 
 ''' --------------- NOT Operator ---------
@@ -484,14 +486,14 @@ print('\n')
          ----------------------------- '''
 # example for AND operator
 print("NOT Operator..!")
-print(not 6482 > 0)             # not True
-print(not "Python" != "Python") # not False
+print(not 6482 > 0)                 # not True
+print(not "Python" != "Python")     # not False
 print('\n')
 
 # ------------- if statements -------
 ''' We'll go over the syntax of an IF statement
 # if True:
-    "Do the sstuff here"
+    "Do the stuff here"
 There are four things every if statement must have. The word "if", a condition, which if it evaluates to true will make thee if statement run its code, a colon, then code for the if statement to execute
  if its condition evaluates too true.'''
 
@@ -651,7 +653,7 @@ for letter in word:
 print('\n')
 
 #  ___________ range()
-#range is function that returns a sequence of numbers and is uually used for iterating over with a for loop. It can take three arguments, start, stop and step, and can be used with one, two or all three of them at the same time.
+#range is function that returns a sequence of numbers and is usually used for iterating over with a for loop. It can take three arguments, start, stop and step, and can be used with one, two or all three of them at the same time.
 
 # __________ using ranger() with 1 argument 1
 one_input = range(5)
@@ -680,7 +682,7 @@ for num in three_input:
 print('\n')
 
 # -------------- String Methods 1 ------------
-'''String methos are function that are built into Python, which allow you to perform useful operations with string such as splitting
+'''String methods are function that are built into Python, which allow you to perform useful operations with string such as splitting
 them or changing their case so that they can be used as aprt of non case sensitive comparisons with other strings.'''
 
 
@@ -725,16 +727,16 @@ print("\n")
              -----------------------------------------------    '''
 
 
-print("Batman".isalpha())       #True
-print("Batman12".isalpha())     #False
-print("Batman123".isalnum())    #True
-print("123".isdecimal())        #Trur
-print("3.14".isdecimal())       #False
-print(" ".isspace())# or print("not just space"[3].isspace()) #True
-print(" not just space".isspace()) #False
-print("The Empire Strikes Back".istitle())  #True
+print("Batman".isalpha())       # True
+print("Batman12".isalpha())     # False
+print("Batman123".isalnum())    # True
+print("123".isdecimal())        # True
+print("3.14".isdecimal())       # False
+print(" ".isspace())            # or print("not just space"[3].isspace()) #True
+print(" not just space".isspace())   # False
+print("The Empire Strikes Back".istitle())  # True
 
-print("the greate gatsby".title()) # output: The Greate Gatsby
+print("the greate gatsby".title())   # output: The Greate Gatsby
 print("\n")
 
 
@@ -745,8 +747,8 @@ arguments ends with return true if the string it is being used on ends with its 
 print("this is a string".startswith("t"))   # True
 print("this is a string".startswith("T"))   # False
 
-print("To infinity and beyond!".endswith("beyond!"))    #True
-print("To infinity and beyond!".endswith("beyond"))     #False
+print("To infinity and beyond!".endswith("beyond!"))       # True
+print("To infinity and beyond!".endswith("beyond"))         # False
 
 print("\n")
 
@@ -777,14 +779,14 @@ print('\n')
 #The rjust and ljust methods can both take one argument and return right justified or left justified versions of the string they are called on.
 #What that means is that when called with one argument, they will return strings that have had spaces added to the left of them or to the right of them.
 
-print("hello world".rjust(15)) # also count the string value of "hello world" there are 11 words
+print("hello world".rjust(15))  # also count the string value of "hello world" there are 11 words
 print("hello world".ljust(15) + "four space later.")
 
 print("\n")
 #___________ .rjust() & .ljust() __________ second argument
 # Can also change the fill character of rjust or ljust to something other than spaces by calling either of them with a second argument.
 
-##### Note: That this second argument can only be one character long and must be a string
+#####Note: That this second argument can only be one character long and must be a string
 
 print("hello world".rjust(15, "_"))
 print("hello world".ljust(15, "*"))
@@ -859,7 +861,7 @@ print("{} majored in {}, works as a {}, and has {} years of experience" .format(
 example_list_1 = [5,4,3,2,1]
 example_list_2 = [2.718, 9.31]
 example_list_3 = ["blue", "green", "red", "yellow"]
-example_list_4 = [True, False, False, True, False ]
+example_list_4 = [True, False, False, True, False]
 example_list_5 = [[1,2,3], [4,5], [6,7,8]]
 example_list_6 = [10,3.14159, "tree",False, [1,2,3]]
 
@@ -883,7 +885,7 @@ print(list("blah"))
 # The "in" and "not in" operators can be used to check whether a value is or isn't in a list. Like other operators such as math operators, they are used in expressions.
 
 checked_list = [1,2,3,4]
-not_in_example = 8 not in checked_list  #if it's there then printing "False" if not there then printing "True"
+not_in_example = 8 not in checked_list  # if it's there then printing "False" if not there then printing "True"
 print(1 in checked_list)
 print(not_in_example)
 
@@ -897,10 +899,10 @@ print("\n")
 
 indexes_example = ["carpet", "hardwood", 'linoleum']
 print(indexes_example[1])
-print(indexes_example[2] [1])
+print(indexes_example[2][1])
 
 indexes_example_1 = [[1,2,3], [4,5,6], [7,8,9]]
-print(indexes_example_1[2] [1])
+print(indexes_example_1[2][1])
 
 # _______- negative indexes ______
 # Accessing by index using a negative integer start from the end of a list and goes backwards.
@@ -939,18 +941,52 @@ example_1[4:7] = [7,6,5]
 print(example_1)
 
 
+print("\n")
 
 
 
+# ---------- del & list methods ------------
 
+# ___________ del __________________
+#del statements allow you to delete values from a list.
 
+planets = ["pluto", "mars", "earth", "venus"]
+del planets[0]
+print(planets)
 
+# ________ .remove() ___________
+#The remove method allows yoy to remove what yoy pass it as an argument from a list.
 
+planets_1 = ["pluto", "mars", "earth", "venus"]
+planets_1.remove("pluto")
+print(planets_1)
 
+colors = ["blue", "red", "white", "blue", "orange", "blue"]
+colors.remove("blue")
+print(colors)
 
+'''may be wondering why you would want to use remove instead of del remove items form a list. Well, the difference 
+between del and remove is that del removes an item based on the index number of the item being removed. While the remove 
+method searches a list for whatever item you passed it as an argument and removed it from the list when it finds that item'''
 
+# ____________ .append() ______________
+#The append list method takes an argument and adds that to the end of the list it is being used on
 
+print("\n_______ .append() _______")
+pets = ["cat", "dog", "parrot"]
+print(pets)
+pets.append("fish")
+print(pets)
 
+# ___________ .insert() _________________
+'''insert is similar to append in that it is used to add an item to a list. However, unlike append, insert allows you to 
+add an item anywhere in the list rather than just at its end. To do this insert takes two arguments where the first argument 
+is the index at which a new item will br added to a list, and the second argument is the item that will be added to the list at that index'''
+
+print("\n_______ .insert() _______")
+pets_1 = ["cat", "dog", "parrot"]
+pets_1.insert(2, "turtle")
+print(pets_1)
 
 
 

@@ -6,7 +6,7 @@ print(ind)
 print(ind[0])
 
 #Access the 14 from the list in step 1 then print it.
-print(ind[3] [1])
+print(ind[3][1])
 
 #Create a second variable and assign it the list ["chair", "table", "desk", "lamp", "bed"]
 ass = ["chair", "table", "desk", "lamp", "bed"]
