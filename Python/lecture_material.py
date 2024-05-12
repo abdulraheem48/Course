@@ -989,6 +989,83 @@ pets_1.insert(2, "turtle")
 print(pets_1)
 
 
+print("\n_______ .sort() _______")
+# _____________ .sort() ____________
+# The sort method can be used to sort lists made up of items that are all numbers or items that are all string.
+num_list = [2.718, 4, -19, 10000, 0]
+print(num_list)
+num_list.sort()
+print(num_list)
+
+str_list = ["Ringo", "John", "George", "Paul"]
+print(str_list)
+str_list.sort()
+print(str_list)
+
+# reverse=True
+print("\n""You can also type \"reverse=True\" in the parentheses of the sort method when calling it to sort items from a list in reverse order.!")
+
+num_list = [2.718, 4, -19, 10000, 0]
+str_list = ["Ringo", "John", "George", "Paul"]
+num_list.sort(reverse=True)
+print(num_list)
+str_list.sort(reverse=True)
+print(str_list)
+
+# _________ using .sort() on mixed data type lists _________
+'''he sort method cannot be used on mixed lists made up of different data types since it doesn't know how to compare strings
+and number to each other, and with other data types in order to sort them. '''
+
+#mixed = [False, 5.67, "string", -2]
+#mixed.sort()
+
+'''Note : this list cannot be sorted because python does not know how to compare strings and numbers. It does not have a way to say if a number is greater than a string or if a number is in alphabetical order. 
+Another thing that you should note When using the sort method is that boolean value false is treated as a zero and the boolean value true is treated as a one. That means that python will be able to sort a mixed 
+data type list if it only contains integers, floats and boolean values.
+
+So if we removed the string form mixed list '''
+
+mixed = [False, 5.67, -2]
+mixed.sort()
+print(mixed)
+
+print("\n ______ ASCIIbetical order _______")
+#_______________ ASCIIbetical order ______________
+''' one final important thing to note about the sort method is that it doesn't actually use alphabetical order, but  instead uses ASCIIbetical order. Alphabetical order and ASCIIbetical order are the same except for one difference, which
+is that in ASCIIbetical order upper letters come before lowercase letters. '''
+
+ASCIIbetical = ["Andy", "kiwi", "apple", "Karen", "Brian", "banana"]
+# noinspection PyTypeChecker
+ASCIIbetical.sort(key=str.lower)
+print(ASCIIbetical)
+
+
+print("\n ______ .index() _______")
+# ______________- .index() ______________
+# The index list method allows you to find out the index number of the item you pass it.
+
+metals = ["copper", "gold", "silver", "iron"]
+print(metals.index("silver"))
+
+numbers = [4, 3, 2, 1, 0, 1, 2, 3, 4]
+print(numbers.index(4))
+
+
+print("\n ______ .pop() _______")
+# ___________ .pop() ____________
+'''The pop method removes and returns an item form a list. Would use it instead of del or the remove method to remove an item from a list
+if you also wanted the removed item to be returned, so that you could assign it to a variable print it or use it in some other way. '''
+
+bands = ["Queen", "Led Zeppline", "The Beatles", "MUSE", "Radiohead"]
+end = bands.pop()
+print(bands)
+print(end)
+
+band = ["Queen", "Led Zeppline", "The Beatles", "MUSE", "Radiohead"]
+ends = band.pop(2)
+print(band)
+print(ends)
+
 
 
 
