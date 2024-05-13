@@ -1056,17 +1056,114 @@ print("\n ______ .pop() _______")
 '''The pop method removes and returns an item form a list. Would use it instead of del or the remove method to remove an item from a list
 if you also wanted the removed item to be returned, so that you could assign it to a variable print it or use it in some other way. '''
 
-bands = ["Queen", "Led Zeppline", "The Beatles", "MUSE", "Radiohead"]
+bands = ["Queen", "Led Zeppelin", "The Beatles", "MUSE", "Radiohead"]
 end = bands.pop()
 print(bands)
 print(end)
 
-band = ["Queen", "Led Zeppline", "The Beatles", "MUSE", "Radiohead"]
+band = ["Queen", "Led Zeppelin", "The Beatles", "MUSE", "Radiohead"]
 ends = band.pop(2)
 print(band)
 print(ends)
 
 
+print("\n ______ Lists vs Strings _______")
+# --------- Lists vs Strings ---------------
+''' A list and string both contain an ordered sequence of items. In addition, several things that can be done with strings can also be done with lists. Because both of them have index numbers 
+corresponding to what they contain. You can access their contents by index get slices from them the length function to get the number of characters or items that they contain and you can even 
+iterate through of them using a for loop or a while loop '''
+
+'''The important distinction between list and strings is that list are mutable while strings are immutable. For a data type to be mutable means that it can have values be changed, removed or added. 
+The values of immutable data types cannot be changes in any way'''
+# Lists = mutable
+#Strinfs = immutable
+
+ex_1 = [1, 2, 3]
+ex_1[1] = 5
+print(ex_1)
+
+'''ex_2 = "123"
+ex_2[1] = 5
+print(ex_2)
+'''
+
+print("\n ______ Creating New String From Old String _______")
+# __________ Creating New String From Old String __________
+ex_3 = "No, you can't"
+ex_4 = "Yes" + ex_3[3:11] + "!"
+print(ex_4)
+
+ex_5 = 3.14
+ex_6 = "coconut"
+ex_7 = ex_5
+ex_8 = ex_6
+print(ex_7)
+print(ex_8)
+
+ex_9 = [1, 2, 3, 4, 5]
+ex_10 = ex_9
+ex_10[2] = 4
+print(ex_9)
+print(ex_10)
+
+print("\n ______ copy module and deepcopy() _______")
+# _______________ copy module and deepcopy() _____________
+
+# The deepcopy function will allow you to crate a copy of list with its own reference when you need it
+import copy
+ex_11 = [1, 2, 3, 4, 5]
+ex_12 = copy.deepcopy(ex_11)
+ex_12[2] = 4
+print(ex_11)
+print(ex_12)
+
+print("\n ______ list line continuation _______")
+# _____________ list line continuation __________________
+ex_13 = ["bush",
+         "fern",
+         "tree",
+         "moss"]
+print(ex_13)
+
+print("\n ______ \ line continuation _______")
+# _____________  \ line continuation ___________
+ex_14 = 2 + \
+        4 + \
+        1
+print(ex_14)
+
+
+print("\n ______ introduction to dictionaries _______")
+# -------- introduction to dictionaries _____________
+''' Dictionaries are a data type which can store a collection of values like list A dictionary is different from a list in that instead of having to have each of its items be assigned to an 
+index number that is an integer, the items that a dictionary contains are assigned to keys which can be different data types such as flats and strings.'''
+
+''' To create a dictionary, you starr by typing curly brackets. Then in the curl brackets, you type key value pairs. A key value pair consists of a key and value separated by a colon and space.'''
+console = {"nintendo" : "wil", "microsoft" : "xbox", "sony" : "playstation"}
+
+print("\n ______ accessing by key _______")
+# _________ accessing by key ______________
+print(console["microsoft"])
+val = console["microsoft"]
+print(val)
+print("The" + console["sony"] + "4 is Sony's newest gaming console.")
+
+
+print("\n ______ key values _______")
+# ________ key values ________________
+''' Keys can be integers, floats or even boolean values if you want them to be. You can even use different data types for different keys in the same dictionary. '''
+mohs_hardness = {9 : "corundum", 10: "diamond"}
+floats = {1.23 : 1000, 3.14159 : 10000, 2.718 : 100000}
+mixed = {"string" : 1, 10210 : 2, 4.976 : 3, False : 4}
+
+
+print("\n ______ dictionaries are unordered _______")
+#__________ dictionaries are unordered _________
+print([2, 4, 6] == [2, 4, 6])
+print([2, 4, 6] == [6, 4, 2])
+first = {0 : 2.1, 1 : 2.2, 2 : 2.3, 3 : 2.4}
+second = {2 : 2.3, 0 : 2.1, 3 : 2.4, 1 : 2.2}
+print(first == second)
 
 
 
