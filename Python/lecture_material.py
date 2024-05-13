@@ -497,12 +497,12 @@ print('\n')
 There are four things every if statement must have. The word "if", a condition, which if it evaluates to true will make thee if statement run its code, a colon, then code for the if statement to execute
  if its condition evaluates too true.'''
 
-""" --------- example for if statement ------------
+# --------- example for if statement ------------
 veg = input("Type the name of vegetable.")
 if veg == "corn":
-    print("The vegetable is corn.") """
+    print("The vegetable is corn.")
 
-# -------- flow chat diagram
+# -------- flow chat diagram ----------------------
 '''         program is run
                     |
                    \|/
@@ -544,11 +544,11 @@ There are three parts that every else statement must have the word else, a colon
 
 
 #--------- example for else statement ------------
-"""veg = input("Type the name of vegetable.")
+veg = input("Type the name of vegetable.")
 if veg == "corn":
     print("The vegetable is corn.")
 else:
-    print("the vegetable is not corn..")"""
+    print("the vegetable is not corn..")
 
 # --------- nested if and else statements -------
 """                     person applies for loan
@@ -570,7 +570,7 @@ need higher GPA to qualify            <-------- Accepted by approved Institution
                                  Programs ends"""
 
 # example foe nested if and else statements
-"""gpa = float(input("What was the applicant's grade point average?"))
+gpa = float(input("What was the applicant's grade point average?"))
 inst_app = input("Is the student going to be educated at an approved institution?")
 
 # ----------- example for nested if and else statements
@@ -581,7 +581,7 @@ if gpa >= 3.7:
     else:
         print("The application does not qualify since they have not been accepted into an approved institution.")
 else:
-    print("The application did not have enough grades to qualify.")"""
+    print("The application did not have enough grades to qualify.")
 
 #---------- elif statements --------------
 ''' The elif statements is also know as the else/if statements, is a statements which allows you to provide as many additional conditions to check as you need without the messiness that comes
@@ -589,7 +589,7 @@ else:
 
 
 # example for elif statements
-"""
+
 user_num = int(input("Please enter an integer."))
 
 if user_num < 0:
@@ -599,7 +599,7 @@ elif user_num == 0:
 elif user_num <= 100:
     print("The number you entered can be 1, 100, or anything in between.")
 else:
-    print("The number yoy entered is greater than 100.") """
+    print("The number yoy entered is greater than 100.") 
 
 
 # ---------- truthy and falsey values  ------------
