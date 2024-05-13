@@ -1166,13 +1166,56 @@ second = {2 : 2.3, 0 : 2.1, 3 : 2.4, 1 : 2.2}
 print(first == second)
 
 
+print("\n ______ Dictionary Method  .keys(), .values(), .items(), and .get() _______")
+# ___ Dictionary Method  .keys(), .values(), .items(), and .get() ___
+
+print("\n ______ .keys() _______")
+#____________ .keys() ___________
+''' The key methos allows you to get all of the keys from a dictionary.'''
+birth_years = {1994 : "bill", 1969 : "emily", 1982 : "elizabeth", 2000 : "turner"}
+print(birth_years.keys())   # also by using for loop
+for key in birth_years.keys():
+    print(key)
+
+print("\n ______ .values() _______")
+# ____________ .values() _____________
+''' Values is a method which allows you to get all of the values from a dictionary to use the values method '''
+birth_years_1 = {1994 : "bill", 1969 : "emily", 1982 : "elizabeth", 2000 : "turner"}
+print(birth_years_1.values())   # also by using for loop
+for key in birth_years_1.values():
+    print(key)
+
+print("\n ______ .items() _______")
+# ____________ .items() _____________
+''' The item method will allow you to do that if you use the items method on a dictionary. '''
+birth_years_2 = {1994 : "bill", 1969 : "emily", 1982 : "elizabeth", 2000 : "turner"}
+print(birth_years_1.items())    # also by using for loop
+for key, value in birth_years_1.items():
+    print(key, value)
+
+print(list(birth_years_2.keys()))
+print(list(birth_years_2.values()))
+print(list(birth_years_2.items()))
+
+# ________ using in & not in on values ________
+print("bill" in birth_years_2.values())
 
 
 
+print("\n ______ .get() _______")
+# ____________ .get() _____________
+birth_years_3 = {1994 : "bill", 1969 : "emily", 1982 : "elizabeth", 2000 : "turner"}
+print(birth_years_3.get(1975, "1975 is not a key in birth_years."))
 
 
-
-
+#_____ other things you should know about dictionaries __________
+''' Dictionaries are immutable data type like list, which means that variable that have been assigned to dictionaries also hold references to dictionaries,
+not the dictionary values themselves. '''
+birth_years_4 = {1994 : "bill", 1969 : "emily", 1982 : "elizabeth", 2000 : "turner"}
+print(birth_years_4)
+people = birth_years_4
+people[1982] = "madeline"
+print(birth_years_4)
 
 
 
