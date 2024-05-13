@@ -1166,12 +1166,12 @@ second = {2 : 2.3, 0 : 2.1, 3 : 2.4, 1 : 2.2}
 print(first == second)
 
 
-print("\n ______ Dictionary Method  .keys(), .values(), .items(), and .get() _______")
+print("\n ______ Dictionary Method 1 .keys(), .values(), .items(), and .get() _______")
 # ___ Dictionary Method  .keys(), .values(), .items(), and .get() ___
 
 print("\n ______ .keys() _______")
 #____________ .keys() ___________
-''' The key methos allows you to get all of the keys from a dictionary.'''
+''' The key methods allows you to get all of the keys from a dictionary.'''
 birth_years = {1994 : "bill", 1969 : "emily", 1982 : "elizabeth", 2000 : "turner"}
 print(birth_years.keys())   # also by using for loop
 for key in birth_years.keys():
@@ -1219,12 +1219,250 @@ print(birth_years_4)
 
 
 
+print("\n ______ .fromkeys() _______")
+
+# _____ Dictionary Method 2 .fromkeys(), .pop() and .popitem() _______
+# _____ .fromkeys() __________
+''' The .fromkeys() method returns a dictionary using two values that it was given as arguments.
+ The first argument it takes is used as keys and the second argument is used as a value.'''
+
+exa_1 = {}.fromkeys(["address"], "1600 pennsylvania Avenue NW")
+print(exa_1)
+
+
+print("\n ______ .pop() _______")
+# ___________ .pop() ____________
+exa_2 = {"make" : "Honda", "model" : "civic", "year" : 2016}
+exa_2.pop("model")
+print(exa_2)
+
+
+print("\n ______ .popitem() _______")
+# ___________ .pop() ____________
+#.popitem() is a method which allows you remove the last key value pair from a dictionary without having to give it an arguments.
+exa_3 = {"name" : "bob", "age" : 38, "occupation" : "accountant", "workplace" : "H&R block"}
+exa_3.popitem()
+print(exa_3)
+
+
+# Dictionary Method 3 .clear(), .copy() and .update() ________
+print("\n ______ .clear() _______")
+# _____________ .clear() ______________
+# The .clear() method just removes everything from a dictionary tht it is called on resulting in an empty dictionary.
+
+exa_4 = {1 : "England", 2 : "Scotland", 3: "Wales", 4 : "Northern Ireland"}
+print(exa_4)
+exa_4.clear()
+print(exa_4)
+
+
+print("\n ______ .copy() _______")
+# _____________ .clear() ______________
+birth_years_5 = {1994 : "bill", 1969 : "emily", 1982 : "elizabeth", 2000 : "turner"}
+print(birth_years_5)
+people_1 = birth_years_5.copy()
+people_1[1982] = "madeline"
+print(birth_years_5)
+
+print("\n ______ .update() _______")
+# _______________- .update() _____________
+#.update() allows us to add key value pairs from one dictionary to another or overwrite the values of existing keys in a dictionary with values form another dictionary
+city_info = {"country" : "Canada", "province" : "Ontario", "city" : "Toronto"}
+population = {"population" : 2930000}
+city_info.update(population)
+city_info["population"] = 3000000
+print(city_info)
+city_info.update(population)
+print(city_info)
+
+print("\n ______ Dictionary Method 4  .setdefault()  _______")
+# ______ Dictionary Method 4  .setdefault() _______
+''' The setdefault method is useful for when you go through a dictionary and look for keys, only to find that certain keys that you are looking for don't exit 
+This is because setdefault allow you to give values to keys if they are not found in a dictionary. Without using setdefault or an if statement, you would just get a key error message 
+ every time you try to access a value from a key that doesn't exist.'''
+
+print("\n ______ without setdefault _____")
+# _____________ without setdefault ________________
+
+computers = {"Google" : "ChromeBook", "Apple" : "MacBook", "Microsoft" : "Surface Pro"}
+if  "Lenovo" not in computers:
+    computers["Lenovo"] = "ThinkPad"
+
+print(computers)
+
+print("\n ______ with setdefault _____")
+# _______  # with setdefault _____
+
+computers_1 = {"Google" : "ChromeBook", "Apple" : "MacBook", "Microsoft" : "Surface Pro"}
+computers_1.setdefault("Lenovo", "ThinkPad")
+print(computers_1)
+
+
+print("\n ______ dict() _____")
+
+#---------- dict() -------------
+# The dictionary function, also known as the dic() function, give you an alternative way to create a dictionary in python.
+
+empty = dict()
+print(empty)
+with_values = dict(a=1, b=2, c=3)
+print(with_values)
+
+
+
+print("\n ______ Introduction to tuples _____")
+# -------------- Introduction to tuples ----------------
+# Tuples are a data type made up of a collection of items. While they are similar to lists in that regard they differ form lists in few ways.
+
+'''' The first is that they are enclosed in parentheses instead of square brackets'''
+
+print("\n ______  tuples _____")
+#
+tuple_1 = ("a", "b", "c", "d", "e")
+tuple_2 = (2.718, False, [1, 2, 3])
+tuple_3 = (1, 1, 0, 0, 0)
+
+tuple_4 = tuple([3,14, 2.205, 10])
+tuple_5 = tuple("edcba")
+print(tuple_4)
+print(tuple_5)
+
+tuple_6 = (1, 3, 5)
+list_1 = [1, 3, 5]
+print(tuple_6.__sizeof__())
+print(list_1.__sizeof__())
+
+print("\n ______  tuple looping _____")
+# ___________ tuple looping __________
+
+print("\n______  tuple using for loop _____")
+# ___________ tuple using for loop __________
+major_cities = ("Tokyo", "London", "New York", "Shanghai", "Sydney")
+for city in major_cities:
+    print(city)
+
+print("\n______  tuple using wile loop _____")
+# ___________ tuple using wile loop __________
+major_cities_1 = ("Tokyo", "London", "New York", "Shanghai", "Sydney")
+
+count = 0
+while count < len(major_cities_1):
+    print(major_cities_1[count])
+    count += 1
+
+# ______ tuple slicing with step _________
+print("\n______  tuple using slicing _____")
+ints = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+print(ints[::3])        # stride length of 3
+print(ints[1::2])        # evens only
+print(ints[7::-1])       # backwards from 8
+print(ints[8::-2])       # odds only backwards
+
+
+# ---------- tuple methods ---------
+print("\n______  .count() _____")
+# _____________ .count() _______________
+repeat = (7, 3, 3, 3, 0, 0, 7, 0, 0)
+print(repeat.count(7))
+print(repeat.count(3))
+print(repeat.count(0))
+
+print("\n______  .index() _____")
+# _____________ .index() _______________
+
+ints = (1, 1, 7)
+print(ints.index(7))
+print(ints.index(1))
 
 
 
 
+print("\n ______ Introduction to sets _____")
+# -------------- Introduction to sets ----------------
+''' A set is data type that consists of a collection of items much like a list. However, sets differ from lists in two important ways.
+The first is that they cannot have duplicate values in them and the second is that the items they contain are unordered like the key va;ues pairs of a dictionary. '''
+
+set_1 = { 9, 8, 7, 6}
+set_2 = set({"a", "b", "c", "d", "e"})
+print(set_1)
+print(set_2)
+
+set_3 = set(range(1, 12, 2))
+print(set_3)
+
+set_4 = {"a", 3.14, 18, True}
+print(set_4)
+
+set_5 = {3, 6, 9, 12, 15}
+
+for num in set_5:
+    print(num)
+
+
+print("\n ______sets methods _____")
+#_______________ .add() ______________
+print("\n ______ .add() _____")
+
+scifi = {"star trek", "star wars", "halo"}
+scifi.add("mass effect")
+print(scifi)
+
+
+#_______________ .remove() ______________
+print("\n ______ .remove() _____")
+
+fruits = {"apple", "orange", "banana", "tomato"}
+fruits.remove("tomato")
+print(fruits)
+
+#_______________ .discard() ______________
+print("\n ______ .discard() _____")
+
+fruits_1 = {"apple", "orange", "banana", "tomato"}
+fruits_1.discard("potato")  # if value not present in list. not do anything
+print(fruits_1)
+fruits_1.discard("apple")   # if value present in list then remover the value
+print(fruits_1)
+
+# _______________ .clear(), .copy(), ___________
+# ____________ .union()  ______________
+print("\n ______ .union() _____")
+
+se_1 = {1, 2, 3, 4, 5}
+se_2 = {6, 7, 8, 9, 10}
+se_3 = se_1.union(se_2)  # or se_3 = se_1 | se_2
+print(se_3)
+
+# ____________ .intersection()  ______________
+print("\n ______ .intersection() _____")
+sets_1 = {4, 5, 6, 7, 8}
+sets_2 = {6, 7, 8, 9, 10}
+sets_3 = sets_1.intersection(sets_2)    # or sets_3 = sets_1 &sets_2
+print(sets_3)
+
+print("\n ______ subtraction  _____")
+# ____________ subtraction   ______________
+
+sets_1 = {4, 5, 6, 7, 8}
+sets_2 = {6, 7, 8, 9, 10}
+sets_3 = sets_2 - sets_1
+print(sets_3)
 
 
 
+print("\n ______ .difference() _____")
+# ____________ .difference()   ______________
+
+sets_4 = {4, 5, 6, 7, 8}
+sets_5 = {6, 7, 8, 9, 10}
+sets_6 = sets_4.difference(sets_5)
+print(sets_6)
 
 
+print("\n ______ set comprehensions _____")
+# ----------- set comprehensions --------------
+comp_1 = {even+2 for even in range(2, 11, 2)}
+print(comp_1)
+
+comp_2 = {char.lower() for char in "ALLCAPS"}
+print(comp_2)
