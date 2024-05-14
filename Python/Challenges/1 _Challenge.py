@@ -25,5 +25,3 @@ bag_m = 4.38
 sum = ((penne + arr + bag + ita +art +bag_m)*100) / 100
 print('$',round(sum, 2))
 print('$',sum)
-
-
