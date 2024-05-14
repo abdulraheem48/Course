@@ -14,5 +14,3 @@ first_variable = 20
 print("First variable:", first_variable)
 print("Second variable:", second_variable)
 print("Third variable:", third_variable)
-
-
