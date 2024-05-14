@@ -25,3 +25,5 @@ print(var)
 # Create a variable and assign it the integer 2 using the expression 17 modulo
 var = 2 % 17
 print(var)
+
+
