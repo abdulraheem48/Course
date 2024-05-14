@@ -7,6 +7,6 @@ print(var["key"])
 #use the in keyword to check if a key appears in the dictionary and print the result
 print("road" in var)
 
-#use not in to check if a key does not appear in the dictionary and print the result
+#use not in to check if a key does not appear in the dictionary and print the result.
 print("road" not in var)
 

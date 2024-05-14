@@ -16,5 +16,4 @@ con = str(var) + " is a float"
 print(con)
 
 #print() the string "Hello, I'm [name], it's nice to meet you!" including quotes (you will need to use the \' or \" escape sequence depending on whether you enclose your strings in single quotes or double quotes.)
-
 print("\"Hello, I'm Raheem, it's nice to meet you!\"")

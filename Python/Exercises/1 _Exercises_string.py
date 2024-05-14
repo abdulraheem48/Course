@@ -22,4 +22,3 @@ print(str_1[:4])
 
 str_1 = "Just do it!"
 print("Don't " + str_1[5:])
-

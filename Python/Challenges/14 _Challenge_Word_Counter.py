@@ -45,6 +45,7 @@ shrimp, lemon shrimp, coconut shrimp, pepper shrimp, shrimp soup, shrimp stew, s
 shrimp burger, shrimp sandwich. That- that's about it."
 
 
+
 def word_couter(words):
     spaces_and_letters = ""
     word_count = 1

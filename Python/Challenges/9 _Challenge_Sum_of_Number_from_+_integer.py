@@ -14,4 +14,3 @@ while pos_int > 0:
 
 print(int_init)
 print(sum)
-

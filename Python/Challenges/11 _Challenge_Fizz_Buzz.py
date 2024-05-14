@@ -4,6 +4,7 @@ However, for numbers which are multiples of both 3 and 5 print “FizzBuzz” in
 
 All the integers which are not multiples of 3 or 5 should just be printed as themselves."""
 
+
 for num in range(1,51):
     if num % 3 == 0 and num % 5 == 0:
         print("FizzBuss")

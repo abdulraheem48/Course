@@ -10,6 +10,5 @@ name_printer(5)
 
 name = input("Enter the name")
 
-
 #Call name_printer() with the variable "name" as its argument.
 name_printer(name)

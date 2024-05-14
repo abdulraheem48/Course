@@ -6,10 +6,11 @@ Use a for loop to reverse the string.  You will need to use range with all 3 inp
 
 Print the reversed string at the bottom of your program."""
 
+
 user_str = input("Please enter a string..! : ")
 reversed = ""
 
-for rev  in range(len(user_str) -1, -1, -1):
+for rev in range(len(user_str) -1, -1, -1):
     reversed += user_str[rev]
 
 print(reversed)

@@ -26,7 +26,7 @@ cre_list = [0.98, 8.78, 6.54, 4.32]
 #Print the slice [8.76, 6.54, 4.32] from the variable you created in step 7
 print(cre_list[1:])
 
-#Print the slice [8.76, 6.54] from the variable you created in step 7
+#Print the slice [8.76, 6.54] from the variable you created in step 7.
 print(cre_list[1:3])
 
 #Print the slice [0.98, 8.76] from the variable you created in step 7.

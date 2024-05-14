@@ -14,6 +14,7 @@ Then, print
 
 in the output by using a while loop to print numbers while the variable does not equal 0.  Use the -= operator to reassign descending values to the variable."""
 
+
 des = 10
 
 while des != 0:

@@ -18,7 +18,6 @@ dic = {"Queen": "Bohemian Rhapsody",
 print("\n ----- using len() ""\n",len(dic))
 
 #use the .keys() method and a for loop to get and print all the keys from the dictionary on separate lines.
-
 print("\n ---- using .keys()",dic.keys())
 for key in dic.keys():
     print(key)

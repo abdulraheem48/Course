@@ -36,5 +36,3 @@ print(words)
 
 #Use the .join() method to join together all the items in the list assigned to words as a single string.  Use .isalpha() to check if the string is made up entirely of letters.  Finally, use print() to display the result.
 print("".join(words).isalpha())
-
-
